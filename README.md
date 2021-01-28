@@ -29,6 +29,8 @@ Once you have ran the installation above and everything has successfully install
 
 * Starter code and project idea provided by © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
 * [Paal Williams](https://github.com/paalwilliams) demonstration to Bootcamp class
+* [Example](https://github.com/SBoudrias/Inquirer.js/issues/45) of using the ```when``` function in Inquirer
+* [Inquirer.js](https://www.npmjs.com/package/inquirer#documentation) Documentation
 
 ## License
 
