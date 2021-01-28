@@ -16,18 +16,6 @@ const render = require("./lib/htmlRenderer");
 
 // Array of questions for user input
 const questions = [{
-        type: 'list',
-        message: 'Would you like to enter and employee?',
-        name: 'Employee',
-        choices: ['Yes', 'No'],
-    },
-    {
-        type: 'list',
-        message: 'What role is the employee in?',
-        name: 'Role',
-        choices: ['Manager', 'Engineer', 'Intern'],
-    },
-    {
         type: 'input',
         name: 'name',
         message: "What is the employees name?",
@@ -43,19 +31,43 @@ const questions = [{
         message: 'What is the employees email address?',
     },
     {
+        type: 'list',
+        message: 'What role is the employee in?',
+        name: 'Role',
+        choices: ['Manager', 'Engineer', 'Intern'],
+    },
+    {
         type: 'input',
         name: 'officeNumber',
         message: 'What is the Managers office number?',
+        when: function(answers) {
+            // Only run if user answered Manager to the Role prompt
+            return answers.Role === "Manager";
+        },
     },
     {
         type: 'input',
         name: 'github',
         message: 'What is the Engineers GitHub Username?',
+        when: function(answers) {
+            // Only run if user answered Engineer to the Role prompt
+            return answers.Role === "Engineer";
+        },
     },
     {
         type: 'input',
         name: 'school',
         message: 'What school does the Intern go to?',
+        when: function(answers) {
+            // Only run if user answered Intern to the Role prompt
+            return answers.Role === "Intern";
+        },
+    },
+    {
+        type: 'confirm',
+        message: 'Would you like to enter another employee?',
+        name: 'Employee',
+        choices: ['Yes', 'No'],
     },
 ];
 
@@ -71,7 +83,7 @@ function init() {
     inquirer
         .prompt(questions)
         .then((data) => {
-            writeToFile('README.md', generateMarkdown(data))
+            //writeToFile('README.md', generateMarkdown(data))
         });
 }
 
