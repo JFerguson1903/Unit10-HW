@@ -10,67 +10,6 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-
-// Write code to use inquirer to gather information about the development team members,
-// and to create objects for each team member (using the correct classes as blueprints!)
-
-// Array of questions for user input
-const questions = [{
-        type: 'input',
-        name: 'name',
-        message: "What is the employees name?",
-    },
-    {
-        type: 'input',
-        name: 'id',
-        message: 'What is their employee id?',
-    },
-    {
-        type: 'input',
-        name: 'email',
-        message: 'What is the employees email address?',
-    },
-    {
-        type: 'list',
-        message: 'What role is the employee in?',
-        name: 'Role',
-        choices: ['Manager', 'Engineer', 'Intern'],
-    },
-    {
-        type: 'input',
-        name: 'officeNumber',
-        message: 'What is the Managers office number?',
-        when: function(answers) {
-            // Only run if user answered Manager to the Role prompt
-            return answers.Role === "Manager";
-        },
-    },
-    {
-        type: 'input',
-        name: 'github',
-        message: 'What is the Engineers GitHub Username?',
-        when: function(answers) {
-            // Only run if user answered Engineer to the Role prompt
-            return answers.Role === "Engineer";
-        },
-    },
-    {
-        type: 'input',
-        name: 'school',
-        message: 'What school does the Intern go to?',
-        when: function(answers) {
-            // Only run if user answered Intern to the Role prompt
-            return answers.Role === "Intern";
-        },
-    },
-    {
-        type: 'confirm',
-        message: 'Would you like to enter another employee?',
-        name: 'Employee',
-        default: true,
-    },
-];
-
 // Function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
@@ -100,18 +39,10 @@ function init() {
 // Hint: you may need to check if the `output` folder exists and create it if it
 // does not.
 
-// HINT: each employee type (manager, engineer, or intern) has slightly different
-// information; write your code to ask different questions via inquirer depending on
-// employee type.
-
-// HINT: make sure to build out your classes first! Remember that your Manager, Engineer,
-// and Intern classes should all extend from a class named Employee; see the directions
-// for further information. Be sure to test out each class and verify it generates an
-// object with the correct structure and methods. This structure will be crucial in order
-// for the provided `render` function to work! ```
 
 
 const collectInputs = async(inputs = []) => {
+    // Array of questions for user input
     const prompts = [{
             type: 'input',
             name: 'name',
@@ -176,6 +107,22 @@ const collectInputs = async(inputs = []) => {
 const main = async() => {
     const inputs = await collectInputs();
     console.log(inputs);
+
+    inputs.forEach(myFunction);
+
+    function myFunction(employeeEntry) {
+        switch (employeeEntry.role) {
+            case "Manager":
+                // code block
+                break;
+            case "Engineer":
+                // code block
+                break;
+            case "Intern":
+                // code block
+                break;
+        }
+    }
 };
 
 main();
