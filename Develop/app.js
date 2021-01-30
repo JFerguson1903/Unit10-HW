@@ -20,17 +20,6 @@ function writeToFile(fileName, data) {
     );
 }
 
-// Function to initialize app
-function init() {
-    inquirer
-        .prompt(questions)
-        .then((data) => {
-            //writeToFile('README.md', generateMarkdown(data))
-        });
-}
-
-// Function call to initialize app
-// init();
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
