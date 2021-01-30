@@ -23,14 +23,17 @@ Run ```npm i``` in the terminal.
 
 ## Usage
 
-Once you have ran the installation above and everything has successfully installed, run ```node index.js``` in the terminal.  
+Once you have ran the installation above and everything has successfully installed, run ```node app.js``` in the terminal. Answer each question when prompted.  A ```team.html``` file will be created in your ```output``` folder - this file can be opened in your default browser. 
 
 ## Credits
 
 * Starter code and project idea provided by © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
 * [Paal Williams](https://github.com/paalwilliams) demonstration to Bootcamp class
 * [Example](https://github.com/SBoudrias/Inquirer.js/issues/45) of using the ```when``` function in Inquirer
+* [Code](http://www.penandpaperprogrammer.com/blog/2018/12/16/repeating-questions-with-inquirerjs) used for looping inquirer questions
 * [Inquirer.js](https://www.npmjs.com/package/inquirer#documentation) Documentation
+* [Google Fonts](https://fonts.google.com/?preview.text=Manager&preview.text_type=custom&category=Serif,Sans+Serif&sidebar.open=true&selection.family=Fredericka+the+Great|Lobster|Lustria|Shadows+Into+Light) for updated fonts
+* [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 
 ## License
 
@@ -55,6 +58,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Tests
+
+Run ```npm test``` in the terminal to test the object classes.
+
+Open ```team.html``` in the browser to validate file compilation and esthetics. 
 
 ## Questions
 
