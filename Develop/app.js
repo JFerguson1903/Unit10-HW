@@ -13,13 +13,6 @@ const render = require("./lib/htmlRenderer");
 // Variable to collect employeeEntry arrays
 let employeeData = [];
 
-// Function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) =>
-        err ? console.log(err) : console.log('README Generated!')
-    );
-}
-
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
@@ -120,8 +113,12 @@ const main = async() => {
                 break;
         }
     }
-};
 
+    // Function to write team.html file
+    fs.writeFile(outputPath, render(employeeData), (err) =>
+        err ? console.log(err) : console.log('Your team page has been generated!')
+    );
+};
 
 
 main();
