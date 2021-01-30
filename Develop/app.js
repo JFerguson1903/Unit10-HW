@@ -10,6 +10,9 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+// Variable to collect employeeEntry arrays
+let employeeData = [];
+
 // Function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
@@ -106,7 +109,6 @@ const collectInputs = async(inputs = []) => {
 
 const main = async() => {
     const inputs = await collectInputs();
-    console.log(inputs);
 
     inputs.forEach(myFunction);
 
@@ -114,15 +116,23 @@ const main = async() => {
         switch (employeeEntry.role) {
             case "Manager":
                 // code block
+                let tempManager = new Manager(employeeEntry.name, employeeEntry.id, employeeEntry.email, employeeEntry.officeNumber);
+                employeeData.push(tempManager);
                 break;
             case "Engineer":
                 // code block
+                let tempEngineer = new Engineer(employeeEntry.name, employeeEntry.id, employeeEntry.email, employeeEntry.github);
+                employeeData.push(tempEngineer);
                 break;
             case "Intern":
                 // code block
+                let tempIntern = new Intern(employeeEntry.name, employeeEntry.id, employeeEntry.email, employeeEntry.school);
+                employeeData.push(tempIntern);
                 break;
         }
     }
 };
+
+
 
 main();
