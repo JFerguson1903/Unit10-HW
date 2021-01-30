@@ -1,5 +1,7 @@
 h1 {
+    color: white;
     font-family: 'Lobster', cursive;
+    font-size: 3.5rem;
 }
 
 h2 {
@@ -10,6 +12,18 @@ h3 {
     font-family: 'Lustria', serif;
 }
 
+.jumbotron {
+    background-color: teal;
+}
 
-/* font-family: 'Shadows Into Light',
-cursive; */
+.manager {
+    background-color: mediumaquamarine;
+}
+
+.engineer {
+    background-color: cornflowerblue;
+}
+
+.intern {
+    background-color: paleturquoise;
+}
