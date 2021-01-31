@@ -25,6 +25,8 @@ Run ```npm i``` in the terminal.
 
 Once you have ran the installation above and everything has successfully installed, run ```node app.js``` in the terminal. Answer each question when prompted.  A ```team.html``` file will be created in your ```output``` folder - this file can be opened in your default browser. 
 
+The demo is avaliable [here](https://jferguson1903.github.io/Unit8-HW/Images/TeamSample.mp4).
+
 ## Credits
 
 * Starter code and project idea provided by © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
