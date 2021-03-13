@@ -27,6 +27,8 @@ Once you have ran the installation above and everything has successfully install
 
 The demo is avaliable [here](https://jferguson1903.github.io/Unit8-HW/Images/TeamSample.mp4).
 
+![image](https://user-images.githubusercontent.com/72481828/111017717-c63bf900-837a-11eb-93c9-df8a84f50067.png)
+
 ## Credits
 
 * Starter code and project idea provided by © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
